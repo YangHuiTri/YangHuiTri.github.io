@@ -1,368 +1,293 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
-<title>Yang</title>
-<link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<!-- Custom Theme files -->
-<link href="css/style.css" rel='stylesheet' type='text/css' />
-<!-- Custom Theme files -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--menu-->
-<link href="css/mmenu.css" rel="stylesheet" type="text/css" media="all" />
-<script src="js/jquery.mmenu.min.js"></script>
-<script type="text/javascript">
-		$(function() {
-			$('nav#menu').mmenu();
-		});
-	</script>
-<script type="text/javascript">
-		jQuery(document).ready(function($) {
-		  $(".scroll").click(function(event){		
-			event.preventDefault();
-		  $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-	});
-</script>
-<script type="text/javascript" src="js/jquery.easing.min.js"></script>	
-	<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
-	<script type="text/javascript">
-	$(function () {
-		
-		var filterList = {
-		
-			init: function () {
-			
-				// MixItUp plugin
-				// http://mixitup.io
-				$('#portfoliolist').mixitup({
-					targetSelector: '.portfolio',
-					filterSelector: '.filter',
-					effects: ['fade'],
-					easing: 'snap',
-					// call the hover effect
-					onMixEnd: filterList.hoverEffect()
-				});				
-			
-			},
-			
-			hoverEffect: function () {
-			}
+<meta charset="utf-8">
+<title>可变形的颗粒</title>
 
-		};
-		
-		// Run the show!
-		filterList.init();
-		
-		
-	});	
-	</script>
-<script type="text/javascript" src="js/move-top.js"></script>
-<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript" src="jquery.min.js" tppabs="http://www.17sucai.com/preview/1/2017-11-15/21/js/jquery.min.js"></script>
+
+<style>
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.container{
+    width: 100％;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}</style>
 </head>
 <body>
-<div class="header">	
-  <div class="container"> 
-     <div id="page">
-		<div id="header_nav">
-			<a href="#menu"></a>
-		</div>
-	    <nav id="menu">
-			<ul>
-				<li class="Selected"><a href="index.html">Home</a></li>
-				<li><a href="#about" class="scroll">About</a></li>
-				<li><a href="#work" class="scroll">Work</a></li>
-				<li><a href="#clients" class="scroll">Clients</a></li>
-			    <li><a href="#services" class="scroll">services</a></li>
-				<li><a href="#contact" class="scroll">Contact</a></li>
-			</ul>
-		</nav>
-	   </div>
-	   <h1>We've Got the talent</h1>
-	   <span> </span>
-	   <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore</p>
-	   <div class="header_arrow">
-	      <a href="#arrow" class="scroll"><span> </span></a>
-	   </div>
-</div>
-</div>
-<div class="introduct" id="arrow">
-	<div class="container">
-		<h2>Introduction</h2>
-		<span> </span>
-		<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit loborti</p>
-	</div>
-</div>
-<div class="create">
-	<div class="container">
-		<a href="#" class="fa-btn btn-1 btn-1e">Pure Creativity.</a>
-	</div>
-</div>
-<div class="work" id="work">
-	<div class="container">
-		<h2>some of our work</h2>
-		<span class="work_line"> </span>
-		<ul id="filters" class="clearfix">
-		  <li><span class="filter active" data-filter="app card icon logo web">All</span></li>
-		  <li><span class="filter" data-filter="app">Branding</span></li>
-		  <li><span class="filter" data-filter="card">Web Design</span></li>
-		  <li><span class="filter" data-filter="icon">Mobile UI</span></li>
-		  <li><span class="filter" data-filter="logo">Illustrations</span></li>
-		  <div class="clearfix"> </div>
-		</ul>
-        <div id="portfoliolist">
-		  <div class="portfolio logo" data-cat="logo">
-				<div class="portfolio-wrapper">				
-					<a href="images/p1.jpg" class="flipLightBox">
-					  <div class="view view-first">
-	                    <img src="images/p1.jpg" class="img-responsive" alt=""/>
-	                      <div class="mask">
-	                        <h3>Mobile UI</h3>
-	                        <p>Google Mail</p>
-	                        <span> </span>
-	                      </div>
-	                  </div>
-					</a>
-				</div>
-			</div>				
-            <div class="portfolio app" data-cat="app">
-				<div class="portfolio-wrapper">				
-					<a href="images/p2.jpg" class="flipLightBox">
-					  <div class="view view-first">
-	                    <img src="images/p2.jpg" class="img-responsive" alt=""/>
-	                      <div class="mask">
-	                        <h3>Mobile UI</h3>
-	                        <p>Google Mail</p>
-	                        <span> </span>
-	                      </div>
-	                  </div>
-					</a>
-				</div>
-			</div>		
-		    <div class="portfolio card" data-cat="card">
-				<div class="portfolio-wrapper">				
-					<a href="images/p3.jpg" class="flipLightBox">
-					  <div class="view view-first">
-	                    <img src="images/p3.jpg" class="img-responsive" alt=""/>
-	                      <div class="mask">
-	                        <h3>Mobile UI</h3>
-	                        <p>Google Mail</p>
-	                        <span> </span>
-	                      </div>
-	                  </div>
-					</a>
-				</div>
-			</div>				
-			<div class="portfolio card" data-cat="card">
-				<div class="portfolio-wrapper">				
-					<a href="images/p4.jpg" class="flipLightBox">
-					  <div class="view view-first">
-	                    <img src="images/p4.jpg" class="img-responsive" alt=""/>
-	                      <div class="mask">
-	                        <h3>Mobile UI</h3>
-	                        <p>Google Mail</p>
-	                        <span> </span>
-	                      </div>
-	                  </div>
-					</a>
-				</div>
-			</div>	
-		    <div class="portfolio app" data-cat="app">
-				<div class="portfolio-wrapper">				
-					<a href="images/p5.jpg" class="flipLightBox">
-					  <div class="view view-first">
-	                    <img src="images/p5.jpg" class="img-responsive" alt=""/>
-	                      <div class="mask">
-	                        <h3>Mobile UI</h3>
-	                        <p>Google Mail</p>
-	                        <span> </span>
-	                      </div>
-	                  </div>
-					</a>
-				</div>
-			</div>			
-			<div class="portfolio icon" data-cat="icon">
-				<div class="portfolio-wrapper">				
-					<a href="images/p6.jpg" class="flipLightBox">
-					  <div class="view view-first">
-	                    <img src="images/p6.jpg" class="img-responsive" alt=""/>
-	                      <div class="mask">
-	                        <h3>Mobile UI</h3>
-	                        <p>Google Mail</p>
-	                        <span> </span>
-	                      </div>
-	                  </div>
-					</a>
-				</div>
-			</div>	
-			<div class="clearfix"> </div>
-		</div>
-		<div class="work_btn">
-		   <a href="#" class="fa-btn btn1 btn-1 btn-1e">show me more</a>
-		</div>
-	</div><!-- container -->
-	<script type="text/javascript" src="js/fliplightbox.min.js"></script>
-	<script type="text/javascript">$('body').flipLightBox()</script>
-	</div>
-   </div>
-  </div>
-</div>
-<div class="tlinks">Collect from <a href="http://www.cssmoban.com/" >企业网站模板</a></div>
-<div class="help">
-	<div class="container">
-	   <a href="#" class="fa-btn btn-1 btn-1e">We're here to help.</a>
-	</div>
-</div>
-<div class="clients" id="clients">
-	<div class="container">
-		<h3>Our Clients</h3>
-		<span> </span>
-		<ul class="clients_grid">
-			<li><img src="images/c1.png" class="img-responsive" alt=""/></li>
-			<li><img src="images/c2.png" class="img-responsive" alt=""/></li>
-			<li><img src="images/c3.png" class="img-responsive" alt=""/></li>
-			<li><img src="images/c4.png" class="img-responsive" alt=""/></li>
-			<li><img src="images/c5.png" class="img-responsive" alt=""/></li>
-		</ul>
-	</div>
-</div>
-<div class="about" id="about">
-	<div class="container">
-		<h3>about us</h3>
-		<span> </span>
-		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney</p>
-	    <div class="about_grid">
-	      <div class="col-sm-3">
-	    		 <div class="view view-first">
-	                 <img src="images/a1.png" class="img-responsive" alt=""/>
-	                 <div class="mask1">
-	                    <h4>Yang</h4>
-	                    <p>CEO/Leader</p>
-	                 </div>
-	             </div>
-	    	</div>
-	    	<div class="col-sm-3">
-	    		 <div class="view view-first">
-	                 <img src="images/a2.jpg" class="img-responsive" alt=""/>
-	                 <div class="mask1">
-	                    <h4>John</h4>
-	                    <p>CEO/Founder</p>
-	                 </div>
-	             </div>
-	    	</div>
-	    	<div class="col-sm-3">
-	    		 <div class="view view-first">
-	                 <img src="images/a3.jpg" class="img-responsive" alt=""/>
-	                 <div class="mask1">
-	                    <h4>John</h4>
-	                    <p>CEO/Founder</p>
-	                 </div>
-	             </div>
-	    	</div>
-	    	<div class="col-sm-3">
-	    	  <div class="grid1">
-	    	    <h4>We are Hiring</h4>
-	    	    <span class="border"> </span>
-		   <a href="#" class="fa-btn btn2 btn-2 btn-1e">Apply</a>
-		</div>
-	   </div>
-	  </div>
-	</div>
-</div>
 
-<div class="about" id="services">
-	<div class="container">
-		<h3>Why Choose Us</h3>
-		<span> </span>
-		<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney</p>
-	    <div class="grid_2 text-center">
-	    	<div class="col-md-4 box1">
-	    		<img src="images/iphone.png" class="img-responsive" alt=""/>
-	    		<h4>App Design</h4>
-	    		<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
-	    	</div>
-	    	<div class="col-md-4 box1">
-	    		<img src="images/ipad.png" class="img-responsive" alt=""/>
-	    		<h4>App Design</h4>
-	    		<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
-	    	</div>
-	    	<div class="col-md-4 box1">
-	    		<img src="images/mac.png" class="img-responsive" alt=""/>
-	    		<h4>App Design</h4>
-	    		<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
-	    	</div>
-	    	<div class="clearfix"> </div>
-	    </div>
-	</div>
-</div>
-<div class="quote">
-	<div class="container">
-		<a href="#" class="fa-btn btn-1 btn-1e">Get a quote now.</a>
-	</div>
-</div>
-<div class="touch"> 
- <div class="container">
- 	<h3>Get In Touch</h3>
- 	<span> </span>
- 	<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney</p>
- </div>	
-</div>
-<div class="contact" id="contact">
-    <div class="col-md-4 contact_left">
-		<h3>Our Location</h3>
-		<p>500 Lorem Ipsum Dolor Sit,</p>
-		<p>22-56-2-9 Sit Amet, Lorem,</p>
-		<p>Phone:(00) 222 666 444</p>
-		<p>USA</p>
-		<ul class="social">
-			<li><a href=""> <i class="tw"> </i> </a></li>
-		    <li><a href=""><i class="fb"> </i> </a></li>
-			<li><a href=""><i class="linkedin"> </i> </a></li>
-			<li><a href=""><i class="vimeo"> </i> </a></li>
-			<li><a href=""><i class="behance"> </i> </a></li>
-		</ul>
-	</div> 
-	<div class="col-md-8 contact_right">
-		<form method="post" action="contact-post.html">
-					<div class="contact_left_box">
-                     	<input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
-					 	<input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" style="margin-left:60px">
-					    <div class="clearfix"></div> 
-					</div>
-					<div class="contact_right_box">
-	                   <textarea value="Message" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message</textarea>
-	                </div>
-	                <div class="form_submit">
-	                	<label class="fa-btn btn2 btn-2 btn-1e"><input type="submit" value="send"></label>
-			        </div>
-					<div class="clearfix"></div>
-       </form>
-	</div> 
-	<div class="clearfix"></div>
- </div>
-<div class="footer">
-	<div class="container">
-		<p class="copy">Copyright &copy; 2018.Personal name All rights reserved <a href="#"  title="野人杨">野人杨</a> - Collect from <a href="#" title="Internet">Internet</a></p>
-	</div>
-	<script type="text/javascript">
-						$(document).ready(function() {
-							/*
-							var defaults = {
-					  			containerID: 'toTop', // fading element id
-								containerHoverID: 'toTopHover', // fading element hover id
-								scrollSpeed: 1200,
-								easingType: 'linear' 
-					 		};
-							*/
-							
-							$().UItoTop({ easingType: 'easeOutQuart' });
-							
-						});
-					</script>
-		<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
-</div>
+<div id="jsi-particle-container" class="container"></div>
+
+<script>
+var RENDERER = {
+	PARTICLE_COUNT : 1000,
+	PARTICLE_RADIUS : 1,
+	MAX_ROTATION_ANGLE : Math.PI / 60,
+	TRANSLATION_COUNT : 500,
+	
+	init : function(strategy){
+		this.setParameters(strategy);
+		this.createParticles();
+		this.setupFigure();
+		this.reconstructMethod();
+		this.bindEvent();
+		this.drawFigure();
+	},
+	setParameters : function(strategy){
+		this.$window = $(window);
+		
+		this.$container = $('#jsi-particle-container');
+		this.width = this.$container.width();
+		this.height = this.$container.height();
+		
+		this.$canvas = $('<canvas />').attr({width : this.width, height : this.height}).appendTo(this.$container);
+		this.context = this.$canvas.get(0).getContext('2d');
+		
+		this.center = {x : this.width / 2, y : this.height / 2};
+		
+		this.rotationX = this.MAX_ROTATION_ANGLE;
+		this.rotationY = this.MAX_ROTATION_ANGLE;
+		this.strategyIndex = 0;
+		this.translationCount = 0;
+		this.theta = 0;
+		
+		this.strategies = strategy.getStrategies();
+		this.particles = [];
+	},
+	createParticles : function(){
+		for(var i = 0; i < this.PARTICLE_COUNT; i ++){
+			this.particles.push(new PARTICLE(this.center));
+		}
+	},
+	reconstructMethod : function(){
+		this.setupFigure = this.setupFigure.bind(this);
+		this.drawFigure = this.drawFigure.bind(this);
+		this.changeAngle = this.changeAngle.bind(this);
+	},
+	bindEvent : function(){
+		this.$container.on('click', this.setupFigure);
+		this.$container.on('mousemove', this.changeAngle);
+	},
+	changeAngle : function(event){
+		var offset = this.$container.offset(),
+			x = event.clientX - offset.left + this.$window.scrollLeft(),
+			y = event.clientY - offset.top + this.$window.scrollTop();
+		
+		this.rotationX = (this.center.y - y) / this.center.y * this.MAX_ROTATION_ANGLE;
+		this.rotationY = (this.center.x - x) / this.center.x * this.MAX_ROTATION_ANGLE;
+	},
+	setupFigure : function(){
+		for(var i = 0, length = this.particles.length; i < length; i++){
+			this.particles[i].setAxis(this.strategies[this.strategyIndex]());
+		}
+		if(++this.strategyIndex == this.strategies.length){
+			this.strategyIndex = 0;
+		}
+		this.translationCount = 0;
+	},
+	drawFigure : function(){
+		requestAnimationFrame(this.drawFigure);
+		
+		this.context.fillStyle = 'rgba(0, 0, 0, 0.2)';
+		this.context.fillRect(0, 0, this.width, this.height);
+		
+		for(var i = 0, length = this.particles.length; i < length; i++){
+			var axis = this.particles[i].getAxis2D(this.theta);
+			
+			this.context.beginPath();
+			this.context.fillStyle = axis.color;
+			this.context.arc(axis.x, axis.y, this.PARTICLE_RADIUS, 0, Math.PI * 2, false);
+			this.context.fill();
+		}
+		this.theta++;
+		this.theta %= 360;
+		
+		for(var i = 0, length = this.particles.length; i < length; i++){
+			this.particles[i].rotateX(this.rotationX);
+			this.particles[i].rotateY(this.rotationY);
+		}
+		this.translationCount++;
+		this.translationCount %= this.TRANSLATION_COUNT;
+		
+		if(this.translationCount == 0){
+			this.setupFigure();
+		}
+	}
+};
+var STRATEGY = {
+	SCATTER_RADIUS :150,
+	CONE_ASPECT_RATIO : 1.5,
+	RING_COUNT : 5,
+	
+	getStrategies : function(){
+		var strategies = [];
+		
+		for(var i in this){
+			if(this[i] == arguments.callee || typeof this[i] != 'function'){
+				continue;
+			}
+			strategies.push(this[i].bind(this));
+		}
+		return strategies;
+	},
+	createSphere : function(){
+		var cosTheta = Math.random() * 2 - 1,
+			sinTheta = Math.sqrt(1 - cosTheta * cosTheta),
+			phi = Math.random() * 2 * Math.PI;
+			
+		return {
+			x : this.SCATTER_RADIUS * sinTheta * Math.cos(phi),
+			y : this.SCATTER_RADIUS * sinTheta * Math.sin(phi),
+			z : this.SCATTER_RADIUS * cosTheta,
+			hue : Math.round(phi / Math.PI * 30)
+		};
+	},
+	createTorus : function(){
+		var theta = Math.random() * Math.PI * 2,
+			x = this.SCATTER_RADIUS + this.SCATTER_RADIUS / 6 * Math.cos(theta),
+			y = this.SCATTER_RADIUS / 6 * Math.sin(theta),
+			phi = Math.random() * Math.PI * 2;
+		
+		return {
+			x : x * Math.cos(phi),
+			y : y,
+			z : x * Math.sin(phi),
+			hue : Math.round(phi / Math.PI * 30)
+		};
+	},
+	createCone : function(){
+		var status = Math.random() > 1 / 3,
+			x,
+			y,
+			phi = Math.random() * Math.PI * 2,
+			rate = Math.tan(30 / 180 * Math.PI) / this.CONE_ASPECT_RATIO;
+		
+		if(status){
+			y = this.SCATTER_RADIUS * (1 - Math.random() * 2);
+			x = (this.SCATTER_RADIUS - y) * rate;
+		}else{
+			y = -this.SCATTER_RADIUS;
+			x = this.SCATTER_RADIUS * 2 * rate * Math.random();
+		}
+		return {
+			x : x * Math.cos(phi),
+			y : y,
+			z : x * Math.sin(phi),
+			hue : Math.round(phi / Math.PI * 30)
+		};
+	},
+	createVase : function(){
+		var theta = Math.random() * Math.PI,
+			x = Math.abs(this.SCATTER_RADIUS * Math.cos(theta) / 2) + this.SCATTER_RADIUS / 8,
+			y = this.SCATTER_RADIUS * Math.cos(theta) * 1.2,
+			phi = Math.random() * Math.PI * 2;
+		
+		return {
+			x : x * Math.cos(phi),
+			y : y,
+			z : x * Math.sin(phi),
+			hue : Math.round(phi / Math.PI * 30)
+		};
+	}
+};
+var PARTICLE = function(center){
+	this.center = center;
+	this.init();
+};
+PARTICLE.prototype = {
+	SPRING : 0.01,
+	FRICTION : 0.9,
+	FOCUS_POSITION : 300,
+	COLOR : 'hsl(%hue, 100%, 70%)',
+	
+	init : function(){
+		this.x = 0;
+		this.y = 0;
+		this.z = 0;
+		this.vx = 0;
+		this.vy = 0;
+		this.vz = 0;
+		this.color;
+	},
+	setAxis : function(axis){
+		this.translating = true;
+		this.nextX = axis.x;
+		this.nextY = axis.y;
+		this.nextZ = axis.z;
+		this.hue = axis.hue;
+	},
+	rotateX : function(angle){
+		var sin = Math.sin(angle),
+			cos = Math.cos(angle),
+			nextY = this.nextY * cos - this.nextZ * sin,
+			nextZ = this.nextZ * cos + this.nextY * sin,
+			y = this.y * cos - this.z * sin,
+			z = this.z * cos + this.y * sin;
+			
+		this.nextY = nextY;
+		this.nextZ = nextZ;
+		this.y = y;
+		this.z = z;
+	},
+	rotateY : function(angle){
+		var sin = Math.sin(angle),
+			cos = Math.cos(angle),
+			nextX = this.nextX * cos - this.nextZ * sin,
+			nextZ = this.nextZ * cos + this.nextX * sin,
+			x = this.x * cos - this.z * sin,
+			z = this.z * cos + this.x * sin;
+			
+		this.nextX = nextX;
+		this.nextZ = nextZ;
+		this.x = x;
+		this.z = z;
+	},
+	rotateZ : function(angle){
+		var sin = Math.sin(angle),
+			cos = Math.cos(angle),
+			nextX = this.nextX * cos - this.nextY * sin,
+			nextY = this.nextY * cos + this.nextX * sin,
+			x = this.x * cos - this.y * sin,
+			y = this.y * cos + this.x * sin;
+			
+		this.nextX = nextX;
+		this.nextY = nextY;
+		this.x = x;
+		this.y = y;
+	},
+	getAxis3D : function(){
+		this.vx += (this.nextX - this.x) * this.SPRING;
+		this.vy += (this.nextY - this.y) * this.SPRING;
+		this.vz += (this.nextZ - this.z) * this.SPRING;
+		
+		this.vx *= this.FRICTION;
+		this.vy *= this.FRICTION;
+		this.vz *= this.FRICTION;
+		
+		this.x += this.vx;
+		this.y += this.vy;
+		this.z += this.vz;
+		
+		return {x : this.x, y : this.y, z : this.z};
+	},
+	getAxis2D : function(theta){
+		var axis = this.getAxis3D(),
+			scale = this.FOCUS_POSITION / (this.FOCUS_POSITION + axis.z);
+			
+		return {x : this.center.x + axis.x * scale, y : this.center.y - axis.y * scale, color : this.COLOR.replace('%hue', this.hue + theta)};
+	}
+};
+$(function(){
+	RENDERER.init(STRATEGY);
+});</script>
 
 </body>
 </html>
