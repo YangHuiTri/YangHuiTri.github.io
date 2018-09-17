@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Infinite Tubes with Three.js | Demo 2 | Codrops</title>
+<title>Infinite Tubes with Three.js | Demo 5 | Codrops</title>
 <meta name="description" content="Infinite WebGL tubes as seen on Fornasetti.com made with Three.js" />
 <meta name="keywords" content="webgl, effect, tube, infinite, interactive, threejs, background, canvas" />
 <meta name="author" content="Louis Hoebregts for Codrops" />
@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="demo.css" tppabs="demo.css" />
 <script>document.documentElement.className = 'js';</script>
 </head>
-<body class="demo-2">
+<body class="demo-5">
 
 <svg class="hidden">
 	<symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -27,23 +27,23 @@
 
 <main>
 	<header class="codrops-header">
-
 		<h1 class="codrops-header__title">Infinite Tubes</h1>
 		<nav class="demos">
-			<a class="demo demo--current" href="index.html" tppabs="index2.html">Particles</a>
-			<a class="demo" href="index5.html" tppabs="index5.html">Triangle</a>
+			<a class="demo" href="index.html" tppabs="index2.html">Particles</a>
+			<a class="demo demo--current" href="index5.html" tppabs="index5.html">Triangle</a>
 		</nav>
-
 	</header>
+	
 	<div class="content">
 		<!-- The canvas where ThreeJs renders the WebGL -->
-		<canvas id="scene" class="clickable"></canvas>
+		<canvas id="scene"></canvas>
 	</div>
+	
 </main>
 
 <script src="three.min.js" tppabs="three.min.js"></script>
-<script src="TweenMax.min.js" tppabs="TweenMax.min.js"></script>
-<script src="demo2.js" tppabs="demo2.js"></script>
+<script src="perlin.js" tppabs="perlin.js"></script>
+<script src="demo5.js" tppabs="demo5.js"></script>
 
 </body>
 </html>
